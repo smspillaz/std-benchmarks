@@ -9,8 +9,8 @@ sort: test_sort.cpp Makefile
 
 benchmark: merge inplace_merge sort
 	echo "merge"
-	hyperfine ./merge
+	hyperfine -r 1000 ./merge
 	echo "inplace_merge"
-	hyperfine ./inplace_merge
+	hyperfine -r 1000 ./inplace_merge
 	echo "sort"
-	hyperfine ./sort
+	hyperfine -r 1000 ./sort
