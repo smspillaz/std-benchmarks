@@ -12,8 +12,8 @@ int main() {
     volatile int out[N];
 
     for (int i = 0; i < N / 2; ++i) {
-        arr1[i] = rand();
-        arr2[i] = rand();
+        arr1[i] = i;
+        arr2[i] = i + 1;
     }
 
     std::merge((int*) arr1, (int*) &arr1[N / 2], (int*) arr2, (int*) &arr2[N / 2], (int*) out);
